@@ -3,14 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 06, 2016 at 11:46 AM
+-- Generation Time: Oct 06, 2016 at 12:39 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
-SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -44,6 +41,10 @@ CREATE TABLE `oc_address` (
   `zone_id` int(11) NOT NULL DEFAULT '0',
   `custom_field` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_address`:
+--
 
 -- --------------------------------------------------------
 
@@ -86,6 +87,10 @@ CREATE TABLE `oc_affiliate` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_affiliate`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -101,6 +106,10 @@ CREATE TABLE `oc_affiliate_activity` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_affiliate_activity`:
+--
 
 -- --------------------------------------------------------
 
@@ -118,6 +127,10 @@ CREATE TABLE `oc_affiliate_login` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_affiliate_login`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -134,6 +147,10 @@ CREATE TABLE `oc_affiliate_transaction` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_affiliate_transaction`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -149,6 +166,10 @@ CREATE TABLE `oc_api` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_api`:
+--
 
 --
 -- Dumping data for table `oc_api`
@@ -170,6 +191,10 @@ CREATE TABLE `oc_api_ip` (
   `ip` varchar(40) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_api_ip`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -188,6 +213,10 @@ CREATE TABLE `oc_api_session` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_api_session`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -200,6 +229,10 @@ CREATE TABLE `oc_attribute` (
   `attribute_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_attribute`:
+--
 
 --
 -- Dumping data for table `oc_attribute`
@@ -232,6 +265,10 @@ CREATE TABLE `oc_attribute_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_attribute_description`:
+--
+
+--
 -- Dumping data for table `oc_attribute_description`
 --
 
@@ -261,6 +298,10 @@ CREATE TABLE `oc_attribute_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_attribute_group`:
+--
+
+--
 -- Dumping data for table `oc_attribute_group`
 --
 
@@ -282,6 +323,10 @@ CREATE TABLE `oc_attribute_group_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_attribute_group_description`:
+--
 
 --
 -- Dumping data for table `oc_attribute_group_description`
@@ -307,6 +352,10 @@ CREATE TABLE `oc_banner` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_banner`:
+--
+
+--
 -- Dumping data for table `oc_banner`
 --
 
@@ -329,6 +378,10 @@ CREATE TABLE `oc_banner_image` (
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_banner_image`:
+--
 
 --
 -- Dumping data for table `oc_banner_image`
@@ -363,6 +416,10 @@ CREATE TABLE `oc_banner_image_description` (
   `banner_id` int(11) NOT NULL,
   `title` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_banner_image_description`:
+--
 
 --
 -- Dumping data for table `oc_banner_image_description`
@@ -402,6 +459,10 @@ CREATE TABLE `oc_cart` (
   `date_added` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_cart`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -420,6 +481,10 @@ CREATE TABLE `oc_category` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_category`:
+--
 
 --
 -- Dumping data for table `oc_category`
@@ -483,6 +548,10 @@ CREATE TABLE `oc_category_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_category_description`:
+--
+
+--
 -- Dumping data for table `oc_category_description`
 --
 
@@ -538,6 +607,10 @@ CREATE TABLE `oc_category_filter` (
   `filter_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_category_filter`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -550,6 +623,10 @@ CREATE TABLE `oc_category_path` (
   `path_id` int(11) NOT NULL,
   `level` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_category_path`:
+--
 
 --
 -- Dumping data for table `oc_category_path`
@@ -641,6 +718,10 @@ CREATE TABLE `oc_category_to_layout` (
   `layout_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_category_to_layout`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -652,6 +733,10 @@ CREATE TABLE `oc_category_to_store` (
   `category_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_category_to_store`:
+--
 
 --
 -- Dumping data for table `oc_category_to_store`
@@ -713,6 +798,10 @@ CREATE TABLE `oc_country` (
   `postcode_required` tinyint(1) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_country`:
+--
 
 --
 -- Dumping data for table `oc_country`
@@ -998,6 +1087,10 @@ CREATE TABLE `oc_coupon` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_coupon`:
+--
+
+--
 -- Dumping data for table `oc_coupon`
 --
 
@@ -1018,6 +1111,10 @@ CREATE TABLE `oc_coupon_category` (
   `category_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_coupon_category`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1034,6 +1131,10 @@ CREATE TABLE `oc_coupon_history` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_coupon_history`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1046,6 +1147,10 @@ CREATE TABLE `oc_coupon_product` (
   `coupon_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_coupon_product`:
+--
 
 -- --------------------------------------------------------
 
@@ -1067,11 +1172,15 @@ CREATE TABLE `oc_currency` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_currency`:
+--
+
+--
 -- Dumping data for table `oc_currency`
 --
 
 INSERT INTO `oc_currency` (`currency_id`, `title`, `code`, `symbol_left`, `symbol_right`, `decimal_place`, `value`, `status`, `date_modified`) VALUES
-(4, 'Гривна', 'UAH', '', ' грн.', '2', 25.84000015, 1, '2016-10-06 11:35:30');
+(4, 'Гривна', 'UAH', '', ' грн.', '2', 1.00000000, 1, '2016-10-06 12:18:48');
 
 -- --------------------------------------------------------
 
@@ -1104,6 +1213,10 @@ CREATE TABLE `oc_customer` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_customer`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1120,6 +1233,10 @@ CREATE TABLE `oc_customer_activity` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_customer_activity`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1132,6 +1249,10 @@ CREATE TABLE `oc_customer_group` (
   `approval` int(1) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_customer_group`:
+--
 
 --
 -- Dumping data for table `oc_customer_group`
@@ -1155,6 +1276,10 @@ CREATE TABLE `oc_customer_group_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_customer_group_description`:
+--
+
+--
 -- Dumping data for table `oc_customer_group_description`
 --
 
@@ -1175,6 +1300,10 @@ CREATE TABLE `oc_customer_history` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_customer_history`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1188,6 +1317,10 @@ CREATE TABLE `oc_customer_ip` (
   `ip` varchar(40) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_customer_ip`:
+--
 
 -- --------------------------------------------------------
 
@@ -1204,6 +1337,10 @@ CREATE TABLE `oc_customer_login` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_customer_login`:
+--
 
 --
 -- Dumping data for table `oc_customer_login`
@@ -1227,6 +1364,10 @@ CREATE TABLE `oc_customer_online` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_customer_online`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1242,6 +1383,10 @@ CREATE TABLE `oc_customer_reward` (
   `points` int(8) NOT NULL DEFAULT '0',
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_customer_reward`:
+--
 
 -- --------------------------------------------------------
 
@@ -1264,6 +1409,10 @@ CREATE TABLE `oc_customer_search` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_customer_search`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1280,6 +1429,10 @@ CREATE TABLE `oc_customer_transaction` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_customer_transaction`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1292,6 +1445,10 @@ CREATE TABLE `oc_customer_wishlist` (
   `product_id` int(11) NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_customer_wishlist`:
+--
 
 -- --------------------------------------------------------
 
@@ -1309,6 +1466,10 @@ CREATE TABLE `oc_custom_field` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_custom_field`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1321,6 +1482,10 @@ CREATE TABLE `oc_custom_field_customer_group` (
   `customer_group_id` int(11) NOT NULL,
   `required` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_custom_field_customer_group`:
+--
 
 -- --------------------------------------------------------
 
@@ -1335,6 +1500,10 @@ CREATE TABLE `oc_custom_field_description` (
   `name` varchar(128) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_custom_field_description`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1347,6 +1516,10 @@ CREATE TABLE `oc_custom_field_value` (
   `custom_field_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_custom_field_value`:
+--
 
 -- --------------------------------------------------------
 
@@ -1362,6 +1535,10 @@ CREATE TABLE `oc_custom_field_value_description` (
   `name` varchar(128) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_custom_field_value_description`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1376,6 +1553,10 @@ CREATE TABLE `oc_download` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_download`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1388,6 +1569,10 @@ CREATE TABLE `oc_download_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_download_description`:
+--
 
 -- --------------------------------------------------------
 
@@ -1402,6 +1587,10 @@ CREATE TABLE `oc_event` (
   `trigger` text NOT NULL,
   `action` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_event`:
+--
 
 --
 -- Dumping data for table `oc_event`
@@ -1422,6 +1611,10 @@ CREATE TABLE `oc_extension` (
   `type` varchar(32) NOT NULL,
   `code` varchar(32) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_extension`:
+--
 
 --
 -- Dumping data for table `oc_extension`
@@ -1446,7 +1639,8 @@ INSERT INTO `oc_extension` (`extension_id`, `type`, `code`) VALUES
 (16, 'total', 'voucher'),
 (17, 'payment', 'free_checkout'),
 (18, 'module', 'featured'),
-(19, 'module', 'slideshow');
+(19, 'module', 'slideshow'),
+(22, 'module', 'fumeproducttab');
 
 -- --------------------------------------------------------
 
@@ -1460,6 +1654,10 @@ CREATE TABLE `oc_filter` (
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_filter`:
+--
 
 -- --------------------------------------------------------
 
@@ -1475,6 +1673,10 @@ CREATE TABLE `oc_filter_description` (
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_filter_description`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1486,6 +1688,10 @@ CREATE TABLE `oc_filter_group` (
   `filter_group_id` int(11) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_filter_group`:
+--
 
 -- --------------------------------------------------------
 
@@ -1499,6 +1705,10 @@ CREATE TABLE `oc_filter_group_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_filter_group_description`:
+--
 
 -- --------------------------------------------------------
 
@@ -1514,6 +1724,10 @@ CREATE TABLE `oc_geo_zone` (
   `date_modified` datetime NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_geo_zone`:
+--
 
 --
 -- Dumping data for table `oc_geo_zone`
@@ -1536,6 +1750,10 @@ CREATE TABLE `oc_information` (
   `sort_order` int(3) NOT NULL DEFAULT '0',
   `status` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_information`:
+--
 
 --
 -- Dumping data for table `oc_information`
@@ -1565,6 +1783,10 @@ CREATE TABLE `oc_information_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_information_description`:
+--
+
+--
 -- Dumping data for table `oc_information_description`
 --
 
@@ -1587,6 +1809,10 @@ CREATE TABLE `oc_information_to_layout` (
   `layout_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_information_to_layout`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1598,6 +1824,10 @@ CREATE TABLE `oc_information_to_store` (
   `information_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_information_to_store`:
+--
 
 --
 -- Dumping data for table `oc_information_to_store`
@@ -1628,6 +1858,10 @@ CREATE TABLE `oc_language` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_language`:
+--
+
+--
 -- Dumping data for table `oc_language`
 --
 
@@ -1645,6 +1879,10 @@ CREATE TABLE `oc_layout` (
   `layout_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_layout`:
+--
 
 --
 -- Dumping data for table `oc_layout`
@@ -1681,6 +1919,10 @@ CREATE TABLE `oc_layout_module` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_layout_module`:
+--
+
+--
 -- Dumping data for table `oc_layout_module`
 --
 
@@ -1690,12 +1932,13 @@ INSERT INTO `oc_layout_module` (`layout_module_id`, `layout_id`, `code`, `positi
 (20, 5, '0', 'column_left', 2),
 (69, 10, 'affiliate', 'column_right', 1),
 (68, 6, 'account', 'column_right', 1),
-(92, 1, 'category', 'column_left', 0),
+(101, 1, 'category', 'column_left', 0),
+(102, 1, 'fumeproducttab.33', 'content_top', 0),
 (72, 3, 'category', 'column_left', 1),
 (73, 3, 'banner.30', 'column_left', 2),
-(91, 1, 'carousel.29', 'content_bottom', 3),
-(89, 1, 'slideshow.27', 'content_top', 1),
-(90, 1, 'featured.28', 'content_top', 2);
+(100, 1, 'carousel.29', 'content_bottom', 3),
+(99, 1, 'slideshow.27', 'content_top', 1),
+(98, 1, 'featured.28', 'content_top', 2);
 
 -- --------------------------------------------------------
 
@@ -1712,6 +1955,10 @@ CREATE TABLE `oc_layout_route` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_layout_route`:
+--
+
+--
 -- Dumping data for table `oc_layout_route`
 --
 
@@ -1719,7 +1966,7 @@ INSERT INTO `oc_layout_route` (`layout_route_id`, `layout_id`, `store_id`, `rout
 (38, 6, 0, 'account/%'),
 (17, 10, 0, 'affiliate/%'),
 (44, 3, 0, 'product/category'),
-(58, 1, 0, 'common/home'),
+(60, 1, 0, 'common/home'),
 (20, 2, 0, 'product/product'),
 (24, 11, 0, 'information/information'),
 (23, 7, 0, 'checkout/%'),
@@ -1743,6 +1990,10 @@ CREATE TABLE `oc_length_class` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_length_class`:
+--
+
+--
 -- Dumping data for table `oc_length_class`
 --
 
@@ -1764,6 +2015,10 @@ CREATE TABLE `oc_length_class_description` (
   `title` varchar(32) NOT NULL,
   `unit` varchar(4) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_length_class_description`:
+--
 
 --
 -- Dumping data for table `oc_length_class_description`
@@ -1793,6 +2048,10 @@ CREATE TABLE `oc_location` (
   `comment` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_location`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1806,6 +2065,10 @@ CREATE TABLE `oc_manufacturer` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_manufacturer`:
+--
 
 --
 -- Dumping data for table `oc_manufacturer`
@@ -1830,6 +2093,10 @@ CREATE TABLE `oc_manufacturer_to_store` (
   `manufacturer_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_manufacturer_to_store`:
+--
 
 --
 -- Dumping data for table `oc_manufacturer_to_store`
@@ -1859,6 +2126,10 @@ CREATE TABLE `oc_marketing` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_marketing`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1875,6 +2146,10 @@ CREATE TABLE `oc_menu` (
   `status` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_menu`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1887,6 +2162,10 @@ CREATE TABLE `oc_menu_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_menu_description`:
+--
 
 -- --------------------------------------------------------
 
@@ -1901,6 +2180,10 @@ CREATE TABLE `oc_menu_module` (
   `code` varchar(64) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_menu_module`:
+--
 
 -- --------------------------------------------------------
 
@@ -1921,6 +2204,10 @@ CREATE TABLE `oc_modification` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_modification`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -1936,6 +2223,10 @@ CREATE TABLE `oc_module` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_module`:
+--
+
+--
 -- Dumping data for table `oc_module`
 --
 
@@ -1944,7 +2235,8 @@ INSERT INTO `oc_module` (`module_id`, `name`, `code`, `setting`) VALUES
 (29, 'Home Page', 'carousel', '{"name":"Home Page","banner_id":"8","width":"130","height":"100","status":"1"}'),
 (28, 'Home Page', 'featured', '{"name":"Home Page","product":["43","40","42","30"],"limit":"4","width":"200","height":"200","status":"1"}'),
 (27, 'Home Page', 'slideshow', '{"name":"Home Page","banner_id":"7","width":"1140","height":"380","status":"1"}'),
-(31, 'Banner 1', 'banner', '{"name":"Banner 1","banner_id":"6","width":"182","height":"182","status":"1"}');
+(31, 'Banner 1', 'banner', '{"name":"Banner 1","banner_id":"6","width":"182","height":"182","status":"1"}'),
+(33, 'Lastest', 'fumeproducttab', '{"name":"Lastest","status":"1","emptytab":"0","product":"","featured_limit":"5","featured_width":"200","featured_height":"200","featured_status":"0","lastest_limit":"5","lastest_width":"200","lastest_height":"200","lastest_status":"1","special_limit":"5","special_width":"200","special_height":"200","special_status":"0","bestseller_limit":"5","bestseller_width":"200","bestseller_height":"200","bestseller_status":"0"}');
 
 -- --------------------------------------------------------
 
@@ -1958,6 +2250,10 @@ CREATE TABLE `oc_option` (
   `type` varchar(32) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_option`:
+--
 
 --
 -- Dumping data for table `oc_option`
@@ -1990,6 +2286,10 @@ CREATE TABLE `oc_option_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_option_description`:
+--
+
+--
 -- Dumping data for table `oc_option_description`
 --
 
@@ -2019,6 +2319,10 @@ CREATE TABLE `oc_option_value` (
   `image` varchar(255) NOT NULL,
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_option_value`:
+--
 
 --
 -- Dumping data for table `oc_option_value`
@@ -2053,6 +2357,10 @@ CREATE TABLE `oc_option_value_description` (
   `option_id` int(11) NOT NULL,
   `name` varchar(128) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_option_value_description`:
+--
 
 --
 -- Dumping data for table `oc_option_value_description`
@@ -2145,6 +2453,10 @@ CREATE TABLE `oc_order` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_order`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2163,6 +2475,10 @@ CREATE TABLE `oc_order_custom_field` (
   `location` varchar(16) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_order_custom_field`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2178,6 +2494,10 @@ CREATE TABLE `oc_order_history` (
   `comment` text NOT NULL,
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_order_history`:
+--
 
 -- --------------------------------------------------------
 
@@ -2196,6 +2516,10 @@ CREATE TABLE `oc_order_option` (
   `value` text NOT NULL,
   `type` varchar(32) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_order_option`:
+--
 
 -- --------------------------------------------------------
 
@@ -2216,6 +2540,10 @@ CREATE TABLE `oc_order_product` (
   `tax` decimal(15,4) NOT NULL DEFAULT '0.0000',
   `reward` int(8) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_order_product`:
+--
 
 -- --------------------------------------------------------
 
@@ -2247,6 +2575,10 @@ CREATE TABLE `oc_order_recurring` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_order_recurring`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2263,6 +2595,10 @@ CREATE TABLE `oc_order_recurring_transaction` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_order_recurring_transaction`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2275,6 +2611,10 @@ CREATE TABLE `oc_order_status` (
   `language_id` int(11) NOT NULL,
   `name` varchar(32) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_order_status`:
+--
 
 --
 -- Dumping data for table `oc_order_status`
@@ -2312,6 +2652,10 @@ CREATE TABLE `oc_order_total` (
   `sort_order` int(3) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_order_total`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2333,6 +2677,10 @@ CREATE TABLE `oc_order_voucher` (
   `message` text NOT NULL,
   `amount` decimal(15,4) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_order_voucher`:
+--
 
 -- --------------------------------------------------------
 
@@ -2376,6 +2724,10 @@ CREATE TABLE `oc_product` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product`:
+--
+
+--
 -- Dumping data for table `oc_product`
 --
 
@@ -2391,14 +2743,15 @@ INSERT INTO `oc_product` (`product_id`, `model`, `sku`, `upc`, `ean`, `jan`, `is
 (36, 'Product 9', '', '', '', '', '', '', '', 994, 6, 'catalog/demo/ipod_nano_1.jpg', 8, 0, '100.0000', 100, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 18:09:19', '2011-09-30 01:07:12'),
 (40, 'product 11', '', '', '', '', '', '', '', 970, 5, 'catalog/demo/iphone_1.jpg', 8, 1, '101.0000', 0, 9, '2009-02-03', '10.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:12', '2011-09-30 01:06:53'),
 (41, 'Product 14', '', '', '', '', '', '', '', 977, 5, 'catalog/demo/imac_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-03', '5.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 0, 1, 0, '2009-02-03 21:07:26', '2011-09-30 01:06:44'),
-(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 1, '2009-02-03 21:07:37', '2011-09-30 00:46:19'),
+(42, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 1, '2009-02-03 21:07:37', '2016-10-06 13:33:58'),
 (43, 'Product 16', '', '', '', '', '', '', '', 929, 5, 'catalog/demo/macbook_1.jpg', 8, 0, '500.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:07:49', '2011-09-30 01:05:46'),
 (44, 'Product 17', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/macbook_air_1.jpg', 8, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:00', '2011-09-30 01:05:53'),
 (45, 'Product 18', '', '', '', '', '', '', '', 998, 5, 'catalog/demo/macbook_pro_1.jpg', 8, 1, '2000.0000', 0, 100, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:17', '2011-09-15 22:22:01'),
 (46, 'Product 19', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/sony_vaio_1.jpg', 10, 1, '1000.0000', 0, 9, '2009-02-03', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-03 21:08:29', '2011-09-30 01:06:39'),
 (47, 'Product 21', '', '', '', '', '', '', '', 1000, 5, 'catalog/demo/hp_1.jpg', 7, 1, '100.0000', 400, 9, '2009-02-03', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 0, 1, 0, 1, 0, '2009-02-03 21:08:40', '2011-09-30 01:05:28'),
 (48, 'product 20', 'test 1', '', '', '', '', '', 'test 2', 995, 5, 'catalog/demo/ipod_classic_1.jpg', 8, 1, '100.0000', 0, 9, '2009-02-08', '1.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 2, 1, 1, 0, 1, 0, '2009-02-08 17:21:51', '2011-09-30 01:07:06'),
-(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 0, '2011-04-26 08:57:34', '2011-09-30 01:06:23');
+(49, 'SAM1', '', '', '', '', '', '', '', 0, 8, 'catalog/demo/samsung_tab_1.jpg', 0, 1, '199.9900', 0, 9, '2011-04-25', '0.00000000', 1, '0.00000000', '0.00000000', '0.00000000', 1, 1, 1, 1, 1, 1, '2011-04-26 08:57:34', '2011-09-30 01:06:23'),
+(50, 'Product 15', '', '', '', '', '', '', '', 990, 5, 'catalog/demo/apple_cinema_30.jpg', 8, 1, '100.0000', 400, 9, '2009-02-04', '12.50000000', 1, '1.00000000', '2.00000000', '3.00000000', 1, 1, 2, 0, 1, 0, '2016-10-06 13:33:16', '2016-10-06 13:35:38');
 
 -- --------------------------------------------------------
 
@@ -2415,6 +2768,10 @@ CREATE TABLE `oc_product_attribute` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product_attribute`:
+--
+
+--
 -- Dumping data for table `oc_product_attribute`
 --
 
@@ -2423,7 +2780,8 @@ INSERT INTO `oc_product_attribute` (`product_id`, `attribute_id`, `language_id`,
 (47, 4, 1, '16GB'),
 (43, 4, 1, '8gb'),
 (42, 3, 1, '100mhz'),
-(47, 2, 1, '4');
+(47, 2, 1, '4'),
+(50, 3, 1, '100mhz');
 
 -- --------------------------------------------------------
 
@@ -2442,6 +2800,10 @@ CREATE TABLE `oc_product_description` (
   `meta_description` varchar(255) NOT NULL,
   `meta_keyword` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_product_description`:
+--
 
 --
 -- Dumping data for table `oc_product_description`
@@ -2465,8 +2827,9 @@ INSERT INTO `oc_product_description` (`product_id`, `language_id`, `name`, `desc
 (43, 1, 'MacBook', '&lt;div&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Intel Core 2 Duo processor&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Powered by an Intel Core 2 Duo processor at speeds up to 2.16GHz, the new MacBook is the fastest ever.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;1GB memory, larger hard drives&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		The new MacBook now comes with 1GB of memory standard and larger hard drives for the entire line perfect for running more of your favorite applications and storing growing media collections.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Sleek, 1.08-inch-thin design&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		MacBook makes it easy to hit the road thanks to its tough polycarbonate case, built-in wireless technologies, and innovative MagSafe Power Adapter that releases automatically if someone accidentally trips on the cord.&lt;/p&gt;\r\n	&lt;p&gt;\r\n		&lt;b&gt;Built-in iSight camera&lt;/b&gt;&lt;/p&gt;\r\n	&lt;p&gt;\r\n		Right out of the box, you can have a video chat with friends or family,2 record a video at your desk, or take fun pictures with Photo Booth&lt;/p&gt;\r\n&lt;/div&gt;\r\n', '', '', '', ''),
 (31, 1, 'Nikon D300', '&lt;div class=&quot;cpt_product_description &quot;&gt;\r\n	&lt;div&gt;\r\n		Engineered with pro-level features and performance, the 12.3-effective-megapixel D300 combines brand new technologies with advanced features inherited from Nikon&amp;#39;s newly announced D3 professional digital SLR camera to offer serious photographers remarkable performance combined with agility.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		Similar to the D3, the D300 features Nikon&amp;#39;s exclusive EXPEED Image Processing System that is central to driving the speed and processing power needed for many of the camera&amp;#39;s new features. The D300 features a new 51-point autofocus system with Nikon&amp;#39;s 3D Focus Tracking feature and two new LiveView shooting modes that allow users to frame a photograph using the camera&amp;#39;s high-resolution LCD monitor. The D300 shares a similar Scene Recognition System as is found in the D3; it promises to greatly enhance the accuracy of autofocus, autoexposure, and auto white balance by recognizing the subject or scene being photographed and applying this information to the calculations for the three functions.&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 reacts with lightning speed, powering up in a mere 0.13 seconds and shooting with an imperceptible 45-millisecond shutter release lag time. The D300 is capable of shooting at a rapid six frames per second and can go as fast as eight frames per second when using the optional MB-D10 multi-power battery pack. In continuous bursts, the D300 can shoot up to 100 shots at full 12.3-megapixel resolution. (NORMAL-LARGE image setting, using a SanDisk Extreme IV 1GB CompactFlash card.)&lt;br /&gt;\r\n		&lt;br /&gt;\r\n		The D300 incorporates a range of innovative technologies and features that will significantly improve the accuracy, control, and performance photographers can get from their equipment. Its new Scene Recognition System advances the use of Nikon&amp;#39;s acclaimed 1,005-segment sensor to recognize colors and light patterns that help the camera determine the subject and the type of scene being photographed before a picture is taken. This information is used to improve the accuracy of autofocus, autoexposure, and auto white balance functions in the D300. For example, the camera can track moving subjects better and by identifying them, it can also automatically select focus points faster and with greater accuracy. It can also analyze highlights and more accurately determine exposure, as well as infer light sources to deliver more accurate white balance detection.&lt;/div&gt;\r\n&lt;/div&gt;\r\n&lt;!-- cpt_container_end --&gt;', '', '', '', ''),
 (49, 1, 'Samsung Galaxy Tab 10.1', '&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1, is the world&amp;rsquo;s thinnest tablet, measuring 8.6 mm thickness, running with Android 3.0 Honeycomb OS on a 1GHz dual-core Tegra 2 processor, similar to its younger brother Samsung Galaxy Tab 8.9.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 gives pure Android 3.0 experience, adding its new TouchWiz UX or TouchWiz 4.0 &amp;ndash; includes a live panel, which lets you to customize with different content, such as your pictures, bookmarks, and social feeds, sporting a 10.1 inches WXGA capacitive touch screen with 1280 x 800 pixels of resolution, equipped with 3 megapixel rear camera with LED flash and a 2 megapixel front camera, HSPA+ connectivity up to 21Mbps, 720p HD video recording capability, 1080p HD playback, DLNA support, Bluetooth 2.1, USB 2.0, gyroscope, Wi-Fi 802.11 a/b/g/n, micro-SD slot, 3.5mm headphone jack, and SIM slot, including the Samsung Stick &amp;ndash; a Bluetooth microphone that can be carried in a pocket like a pen and sound dock with powered subwoofer.&lt;/p&gt;\r\n&lt;p&gt;\r\n	Samsung Galaxy Tab 10.1 will come in 16GB / 32GB / 64GB verities and pre-loaded with Social Hub, Reader&amp;rsquo;s Hub, Music Hub and Samsung Mini Apps Tray &amp;ndash; which gives you access to more commonly used apps to help ease multitasking and it is capable of Adobe Flash Player 10.2, powered by 6860mAh battery that gives you 10hours of video-playback time.&amp;nbsp;&amp;auml;&amp;ouml;&lt;/p&gt;\r\n', '', '', '', ''),
-(42, 1, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there&amp;#39;s no limit to what you can achieve. &lt;br /&gt;\r\n	&lt;br /&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it&amp;#39;s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br /&gt;\r\n	&lt;br /&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple&amp;#39;s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br /&gt;\r\n	&lt;br /&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br /&gt;\r\n	&lt;br /&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br /&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170&amp;deg; horizontal; 170&amp;deg; vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br /&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br /&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50&amp;deg; to 95&amp;deg; F (10&amp;deg; to 35&amp;deg; C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40&amp;deg; to 116&amp;deg; F (-40&amp;deg; to 47&amp;deg; C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO &amp;#39;03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br /&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', '', '', ''),
-(30, 1, 'Canon EOS 5D', '&lt;p&gt;\r\n	Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', '', '', '');
+(42, 1, 'Apple Cinema NEW', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', '', 'apple', '', ''),
+(30, 1, 'Canon EOS 5D', '&lt;p&gt;\r\n	Canon''s press material for the EOS 5D states that it ''defines (a) new D-SLR category'', while we''re not typically too concerned with marketing talk this particular statement is clearly pretty accurate. The EOS 5D is unlike any previous digital SLR in that it combines a full-frame (35 mm sized) high resolution sensor (12.8 megapixels) with a relatively compact body (slightly larger than the EOS 20D, although in your hand it feels noticeably ''chunkier''). The EOS 5D is aimed to slot in between the EOS 20D and the EOS-1D professional digital SLR''s, an important difference when compared to the latter is that the EOS 5D doesn''t have any environmental seals. While Canon don''t specifically refer to the EOS 5D as a ''professional'' digital SLR it will have obvious appeal to professionals who want a high quality digital SLR in a body lighter than the EOS-1D. It will also no doubt appeal to current EOS 20D owners (although lets hope they''ve not bought too many EF-S lenses...) äë&lt;/p&gt;\r\n', '', '', '', ''),
+(50, 1, 'Apple Cinema 30&quot;', '&lt;p&gt;\r\n	&lt;font face=&quot;helvetica,geneva,arial&quot; size=&quot;2&quot;&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The 30-inch Apple Cinema HD Display delivers an amazing 2560 x 1600 pixel resolution. Designed specifically for the creative professional, this display provides more space for easier access to all the tools and palettes needed to edit, format and composite your work. Combine this display with a Mac Pro, MacBook Pro, or PowerMac G5 and there''s no limit to what you can achieve. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features an active-matrix liquid crystal display that produces flicker-free images that deliver twice the brightness, twice the sharpness and twice the contrast ratio of a typical CRT display. Unlike other flat panels, it''s designed with a pure digital interface to deliver distortion-free images that never need adjusting. With over 4 million digital pixels, the display is uniquely suited for scientific and technical applications such as visualizing molecular structures or analyzing geological data. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Offering accurate, brilliant color performance, the Cinema HD delivers up to 16.7 million colors across a wide gamut allowing you to see subtle nuances between colors from soft pastels to rich jewel tones. A wide viewing angle ensures uniform color from edge to edge. Apple''s ColorSync technology allows you to create custom profiles to maintain consistent color onscreen and in print. The result: You can confidently use this display in all your color-critical applications. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;Housed in a new aluminum design, the display has a very thin bezel that enhances visual accuracy. Each display features two FireWire 400 ports and two USB 2.0 ports, making attachment of desktop peripherals, such as iSight, iPod, digital and still cameras, hard drives, printers and scanners, even more accessible and convenient. Taking advantage of the much thinner and lighter footprint of an LCD, the new displays support the VESA (Video Electronics Standards Association) mounting interface standard. Customers with the optional Cinema Display VESA Mount Adapter kit gain the flexibility to mount their display in locations most appropriate for their work environment. &lt;br&gt;\r\n	&lt;br&gt;\r\n	&lt;/font&gt;&lt;font face=&quot;Helvetica&quot; size=&quot;2&quot;&gt;The Cinema HD features a single cable design with elegant breakout for the USB 2.0, FireWire 400 and a pure digital connection using the industry standard Digital Video Interface (DVI) interface. The DVI connection allows for a direct pure-digital connection.&lt;br&gt;\r\n	&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;\r\n&lt;h3&gt;\r\n	Features:&lt;/h3&gt;\r\n&lt;p&gt;\r\n	Unrivaled display performance&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch (viewable) active-matrix liquid crystal display provides breathtaking image quality and vivid, richly saturated color.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 2560-by-1600 pixel resolution for display of high definition still and video imagery.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Wide-format design for simultaneous display of two full pages of text and graphics.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Industry standard DVI connector for direct attachment to Mac- and Windows-based desktops and notebooks&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Incredibly wide (170 degree) horizontal and vertical viewing angle for maximum visibility and color performance.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Lightning-fast pixel response for full-motion digital video playback.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for 16.7 million saturated colors, for use in all graphics-intensive applications.&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Simple setup and operation&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Single cable with elegant breakout for connection to DVI, USB and FireWire ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Built-in two-port USB 2.0 hub for easy connection of desktop peripheral devices.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports to support iSight and other desktop peripherals&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Sleek, elegant design&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Huge virtual workspace, very small footprint.&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Narrow Bezel design to minimize visual impact of using dual displays&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Unique hinge design for effortless adjustment&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Support for VESA mounting solutions (Apple Cinema Display VESA Mount Adapter sold separately)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;h3&gt;\r\n	Technical specifications&lt;/h3&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen size (diagonal viewable image size)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Apple Cinema HD Display: 30 inches (29.7-inch viewable)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen type&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Thin film transistor (TFT) active-matrix liquid crystal display (AMLCD)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Resolutions&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		2560 x 1600 pixels (optimum resolution)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		2048 x 1280&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1920 x 1200&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1280 x 800&lt;/li&gt;\r\n	&lt;li&gt;\r\n		1024 x 640&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Display colors (maximum)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16.7 million&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Viewing angle (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		170° horizontal; 170° vertical&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Brightness (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 400 cd/m2&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Contrast ratio (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		700:1&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Response time (typical)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		16 ms&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Pixel pitch&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		30-inch Cinema HD Display: 0.250 mm&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Screen treatment&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Antiglare hardcoat&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;User controls (hardware and software)&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Display Power,&lt;/li&gt;\r\n	&lt;li&gt;\r\n		System sleep, wake&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Brightness&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Monitor tilt&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Connectors and cables&lt;/b&gt;&lt;br&gt;\r\n	Cable&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		DVI (Digital Visual Interface)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		FireWire 400&lt;/li&gt;\r\n	&lt;li&gt;\r\n		USB 2.0&lt;/li&gt;\r\n	&lt;li&gt;\r\n		DC power (24 V)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	Connectors&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Two-port, self-powered USB 2.0 hub&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Two FireWire 400 ports&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Kensington security port&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;VESA mount adapter&lt;/b&gt;&lt;br&gt;\r\n	Requires optional Cinema Display VESA Mount Adapter (M9649G/A)&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Compatible with VESA FDMI (MIS-D, 100, C) compliant mounting solutions&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Electrical requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Input voltage: 100-240 VAC 50-60Hz&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum power when operating: 150W&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Energy saver mode: 3W or less&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Environmental requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Operating temperature: 50° to 95° F (10° to 35° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Storage temperature: -40° to 116° F (-40° to 47° C)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Operating humidity: 20% to 80% noncondensing&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Maximum operating altitude: 10,000 feet&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Agency approvals&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		FCC Part 15 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55022 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN55024&lt;/li&gt;\r\n	&lt;li&gt;\r\n		VCCI Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		AS/NZS 3548 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CNS 13438 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ICES-003 Class B&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ISO 13406 part 2&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MPR II&lt;/li&gt;\r\n	&lt;li&gt;\r\n		IEC 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		UL 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		CSA 60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		EN60950&lt;/li&gt;\r\n	&lt;li&gt;\r\n		ENERGY STAR&lt;/li&gt;\r\n	&lt;li&gt;\r\n		TCO ''03&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;Size and weight&lt;/b&gt;&lt;br&gt;\r\n	30-inch Apple Cinema HD Display&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Height: 21.3 inches (54.3 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Width: 27.2 inches (68.8 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Depth: 8.46 inches (21.5 cm)&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Weight: 27.5 pounds (12.5 kg)&lt;/li&gt;\r\n&lt;/ul&gt;\r\n&lt;p&gt;\r\n	&lt;b&gt;System Requirements&lt;/b&gt;&lt;/p&gt;\r\n&lt;ul&gt;\r\n	&lt;li&gt;\r\n		Mac Pro, all graphic options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		MacBook Pro&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI-X) with ATI Radeon 9650 or better or NVIDIA GeForce 6800 GT DDL or better&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Power Mac G5 (PCI Express), all graphics options&lt;/li&gt;\r\n	&lt;li&gt;\r\n		PowerBook G4 with dual-link DVI support&lt;/li&gt;\r\n	&lt;li&gt;\r\n		Windows PC and graphics card that supports DVI ports with dual-link digital bandwidth and VESA DDC standard for plug-and-play setup&lt;/li&gt;\r\n&lt;/ul&gt;\r\n', 'apple', 'Apple', '', '');
 
 -- --------------------------------------------------------
 
@@ -2487,13 +2850,20 @@ CREATE TABLE `oc_product_discount` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product_discount`:
+--
+
+--
 -- Dumping data for table `oc_product_discount`
 --
 
 INSERT INTO `oc_product_discount` (`product_discount_id`, `product_id`, `customer_group_id`, `quantity`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(440, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
-(439, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
-(438, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
+(446, 42, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
+(445, 42, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
+(444, 42, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00'),
+(449, 50, 1, 30, 1, '66.0000', '0000-00-00', '0000-00-00'),
+(448, 50, 1, 20, 1, '77.0000', '0000-00-00', '0000-00-00'),
+(447, 50, 1, 10, 1, '88.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -2506,6 +2876,10 @@ CREATE TABLE `oc_product_filter` (
   `product_id` int(11) NOT NULL,
   `filter_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_product_filter`:
+--
 
 -- --------------------------------------------------------
 
@@ -2520,6 +2894,10 @@ CREATE TABLE `oc_product_image` (
   `image` varchar(255) DEFAULT NULL,
   `sort_order` int(3) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_product_image`:
+--
 
 --
 -- Dumping data for table `oc_product_image`
@@ -2582,11 +2960,16 @@ INSERT INTO `oc_product_image` (`product_image_id`, `product_id`, `image`, `sort
 (2324, 49, 'catalog/demo/samsung_tab_4.jpg', 0),
 (2323, 49, 'catalog/demo/samsung_tab_3.jpg', 0),
 (2322, 49, 'catalog/demo/samsung_tab_2.jpg', 0),
-(2317, 42, 'catalog/demo/canon_logo.jpg', 0),
-(2316, 42, 'catalog/demo/hp_1.jpg', 0),
-(2315, 42, 'catalog/demo/compaq_presario.jpg', 0),
-(2314, 42, 'catalog/demo/canon_eos_5d_1.jpg', 0),
-(2313, 42, 'catalog/demo/canon_eos_5d_2.jpg', 0);
+(2360, 42, 'catalog/demo/canon_eos_5d_1.jpg', 0),
+(2359, 42, 'catalog/demo/compaq_presario.jpg', 0),
+(2358, 42, 'catalog/demo/hp_1.jpg', 0),
+(2357, 42, 'catalog/demo/canon_logo.jpg', 0),
+(2365, 50, 'catalog/demo/canon_eos_5d_1.jpg', 0),
+(2364, 50, 'catalog/demo/compaq_presario.jpg', 0),
+(2363, 50, 'catalog/demo/hp_1.jpg', 0),
+(2362, 50, 'catalog/demo/canon_logo.jpg', 0),
+(2361, 42, 'catalog/demo/canon_eos_5d_2.jpg', 0),
+(2366, 50, 'catalog/demo/canon_eos_5d_2.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -2604,22 +2987,35 @@ CREATE TABLE `oc_product_option` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product_option`:
+--
+
+--
 -- Dumping data for table `oc_product_option`
 --
 
 INSERT INTO `oc_product_option` (`product_option_id`, `product_id`, `option_id`, `value`, `required`) VALUES
 (224, 35, 11, '', 1),
 (225, 47, 12, '2011-04-22', 1),
-(223, 42, 2, '', 1),
-(217, 42, 5, '', 1),
-(209, 42, 6, '', 1),
-(218, 42, 1, '', 1),
-(208, 42, 4, 'test', 1),
-(219, 42, 8, '2011-02-20', 1),
 (222, 42, 7, '', 1),
+(219, 42, 8, '2011-02-20', 1),
+(208, 42, 4, 'test', 1),
+(218, 42, 1, '', 1),
+(209, 42, 6, '', 1),
+(217, 42, 5, '', 1),
+(223, 42, 2, '', 1),
+(226, 30, 5, '', 1),
+(233, 50, 7, '', 1),
+(232, 50, 8, '2011-02-20', 1),
+(231, 50, 4, 'test', 1),
+(230, 50, 1, '', 1),
+(229, 50, 6, '', 1),
+(228, 50, 5, '', 1),
+(227, 50, 2, '', 1),
 (221, 42, 9, '22:25', 1),
 (220, 42, 10, '2011-02-20 22:25', 1),
-(226, 30, 5, '', 1);
+(234, 50, 9, '22:25', 1),
+(235, 50, 10, '2011-02-20 22:25', 1);
 
 -- --------------------------------------------------------
 
@@ -2645,26 +3041,41 @@ CREATE TABLE `oc_product_option_value` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product_option_value`:
+--
+
+--
 -- Dumping data for table `oc_product_option_value`
 --
 
 INSERT INTO `oc_product_option_value` (`product_option_value_id`, `product_option_id`, `product_id`, `option_id`, `option_value_id`, `quantity`, `subtract`, `price`, `price_prefix`, `points`, `points_prefix`, `weight`, `weight_prefix`) VALUES
-(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
-(6, 218, 42, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
-(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
 (5, 218, 42, 1, 32, 96, 1, '10.0000', '+', 1, '+', '10.00000000', '+'),
-(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
-(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
+(7, 218, 42, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
+(6, 218, 42, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
 (3, 217, 42, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
-(8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
-(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
-(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
+(2, 217, 42, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
+(4, 217, 42, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
+(1, 217, 42, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
 (11, 223, 42, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
+(9, 223, 42, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
+(10, 223, 42, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
+(8, 223, 42, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
 (12, 224, 35, 11, 46, 0, 1, '5.0000', '+', 0, '+', '0.00000000', '+'),
 (13, 224, 35, 11, 47, 10, 1, '10.0000', '+', 0, '+', '0.00000000', '+'),
 (14, 224, 35, 11, 48, 15, 1, '15.0000', '+', 0, '+', '0.00000000', '+'),
 (16, 226, 30, 5, 40, 5, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
-(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+');
+(15, 226, 30, 5, 39, 2, 1, '0.0000', '+', 0, '+', '0.00000000', '+'),
+(26, 230, 50, 1, 43, 300, 1, '30.0000', '+', 3, '+', '30.00000000', '+'),
+(25, 230, 50, 1, 31, 146, 1, '20.0000', '+', 2, '-', '20.00000000', '+'),
+(24, 228, 50, 5, 40, 300, 0, '3.0000', '+', 0, '+', '3.00000000', '+'),
+(23, 228, 50, 5, 42, 200, 1, '2.0000', '+', 0, '+', '2.00000000', '+'),
+(22, 228, 50, 5, 39, 92, 1, '4.0000', '+', 0, '+', '4.00000000', '+'),
+(21, 228, 50, 5, 41, 100, 0, '1.0000', '+', 0, '+', '1.00000000', '+'),
+(20, 227, 50, 2, 45, 3998, 1, '40.0000', '+', 0, '+', '40.00000000', '+'),
+(19, 227, 50, 2, 24, 194, 1, '20.0000', '+', 0, '+', '20.00000000', '+'),
+(18, 227, 50, 2, 44, 2696, 1, '30.0000', '+', 0, '+', '30.00000000', '+'),
+(17, 227, 50, 2, 23, 48, 1, '10.0000', '+', 0, '+', '10.00000000', '+'),
+(27, 230, 50, 1, 32, 96, 1, '10.0000', '+', 1, '+', '10.00000000', '+');
 
 -- --------------------------------------------------------
 
@@ -2679,6 +3090,10 @@ CREATE TABLE `oc_product_recurring` (
   `customer_group_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_product_recurring`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2692,14 +3107,22 @@ CREATE TABLE `oc_product_related` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product_related`:
+--
+
+--
 -- Dumping data for table `oc_product_related`
 --
 
 INSERT INTO `oc_product_related` (`product_id`, `related_id`) VALUES
 (40, 42),
+(40, 50),
 (41, 42),
+(41, 50),
 (42, 40),
-(42, 41);
+(42, 41),
+(50, 40),
+(50, 41);
 
 -- --------------------------------------------------------
 
@@ -2716,11 +3139,15 @@ CREATE TABLE `oc_product_reward` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product_reward`:
+--
+
+--
 -- Dumping data for table `oc_product_reward`
 --
 
 INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_group_id`, `points`) VALUES
-(515, 42, 1, 100),
+(547, 42, 1, 100),
 (519, 47, 1, 300),
 (379, 28, 1, 400),
 (329, 43, 1, 600),
@@ -2738,7 +3165,8 @@ INSERT INTO `oc_product_reward` (`product_reward_id`, `product_id`, `customer_gr
 (351, 36, 1, 0),
 (353, 34, 1, 0),
 (355, 32, 1, 0),
-(521, 49, 1, 1000);
+(521, 49, 1, 1000),
+(548, 50, 1, 100);
 
 -- --------------------------------------------------------
 
@@ -2758,13 +3186,18 @@ CREATE TABLE `oc_product_special` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_product_special`:
+--
+
+--
 -- Dumping data for table `oc_product_special`
 --
 
 INSERT INTO `oc_product_special` (`product_special_id`, `product_id`, `customer_group_id`, `priority`, `price`, `date_start`, `date_end`) VALUES
-(419, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
+(441, 42, 1, 1, '90.0000', '0000-00-00', '0000-00-00'),
 (439, 30, 1, 2, '90.0000', '0000-00-00', '0000-00-00'),
-(438, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00');
+(438, 30, 1, 1, '80.0000', '0000-00-00', '0000-00-00'),
+(442, 50, 1, 1, '90.0000', '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -2777,6 +3210,10 @@ CREATE TABLE `oc_product_to_category` (
   `product_id` int(11) NOT NULL,
   `category_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_product_to_category`:
+--
 
 --
 -- Dumping data for table `oc_product_to_category`
@@ -2812,7 +3249,9 @@ INSERT INTO `oc_product_to_category` (`product_id`, `category_id`) VALUES
 (47, 20),
 (48, 20),
 (48, 34),
-(49, 57);
+(49, 57),
+(50, 20),
+(50, 28);
 
 -- --------------------------------------------------------
 
@@ -2825,6 +3264,10 @@ CREATE TABLE `oc_product_to_download` (
   `product_id` int(11) NOT NULL,
   `download_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_product_to_download`:
+--
 
 -- --------------------------------------------------------
 
@@ -2839,6 +3282,18 @@ CREATE TABLE `oc_product_to_layout` (
   `layout_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_product_to_layout`:
+--
+
+--
+-- Dumping data for table `oc_product_to_layout`
+--
+
+INSERT INTO `oc_product_to_layout` (`product_id`, `store_id`, `layout_id`) VALUES
+(42, 0, 0),
+(50, 0, 0);
+
 -- --------------------------------------------------------
 
 --
@@ -2850,6 +3305,10 @@ CREATE TABLE `oc_product_to_store` (
   `product_id` int(11) NOT NULL,
   `store_id` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_product_to_store`:
+--
 
 --
 -- Dumping data for table `oc_product_to_store`
@@ -2874,7 +3333,8 @@ INSERT INTO `oc_product_to_store` (`product_id`, `store_id`) VALUES
 (46, 0),
 (47, 0),
 (48, 0),
-(49, 0);
+(49, 0),
+(50, 0);
 
 -- --------------------------------------------------------
 
@@ -2898,6 +3358,10 @@ CREATE TABLE `oc_recurring` (
   `sort_order` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_recurring`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2910,6 +3374,10 @@ CREATE TABLE `oc_recurring_description` (
   `language_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_recurring_description`:
+--
 
 -- --------------------------------------------------------
 
@@ -2940,6 +3408,10 @@ CREATE TABLE `oc_return` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_return`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2952,6 +3424,10 @@ CREATE TABLE `oc_return_action` (
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(64) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_return_action`:
+--
 
 --
 -- Dumping data for table `oc_return_action`
@@ -2978,6 +3454,10 @@ CREATE TABLE `oc_return_history` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_return_history`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -2990,6 +3470,10 @@ CREATE TABLE `oc_return_reason` (
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(128) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_return_reason`:
+--
 
 --
 -- Dumping data for table `oc_return_reason`
@@ -3014,6 +3498,10 @@ CREATE TABLE `oc_return_status` (
   `language_id` int(11) NOT NULL DEFAULT '0',
   `name` varchar(32) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_return_status`:
+--
 
 --
 -- Dumping data for table `oc_return_status`
@@ -3043,6 +3531,10 @@ CREATE TABLE `oc_review` (
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_review`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -3058,6 +3550,10 @@ CREATE TABLE `oc_setting` (
   `value` text NOT NULL,
   `serialized` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_setting`:
+--
 
 --
 -- Dumping data for table `oc_setting`
@@ -3226,6 +3722,10 @@ CREATE TABLE `oc_stock_status` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_stock_status`:
+--
+
+--
 -- Dumping data for table `oc_stock_status`
 --
 
@@ -3249,6 +3749,10 @@ CREATE TABLE `oc_store` (
   `ssl` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_store`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -3263,6 +3767,10 @@ CREATE TABLE `oc_tax_class` (
   `date_added` datetime NOT NULL,
   `date_modified` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_tax_class`:
+--
 
 --
 -- Dumping data for table `oc_tax_class`
@@ -3290,6 +3798,10 @@ CREATE TABLE `oc_tax_rate` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_tax_rate`:
+--
+
+--
 -- Dumping data for table `oc_tax_rate`
 --
 
@@ -3308,6 +3820,10 @@ CREATE TABLE `oc_tax_rate_to_customer_group` (
   `tax_rate_id` int(11) NOT NULL,
   `customer_group_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_tax_rate_to_customer_group`:
+--
 
 --
 -- Dumping data for table `oc_tax_rate_to_customer_group`
@@ -3331,6 +3847,10 @@ CREATE TABLE `oc_tax_rule` (
   `based` varchar(10) NOT NULL,
   `priority` int(5) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_tax_rule`:
+--
 
 --
 -- Dumping data for table `oc_tax_rule`
@@ -3357,6 +3877,10 @@ CREATE TABLE `oc_theme` (
   `code` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_theme`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -3373,6 +3897,10 @@ CREATE TABLE `oc_translation` (
   `value` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_translation`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -3388,6 +3916,10 @@ CREATE TABLE `oc_upload` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_upload`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -3402,6 +3934,10 @@ CREATE TABLE `oc_url_alias` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_url_alias`:
+--
+
+--
 -- Dumping data for table `oc_url_alias`
 --
 
@@ -3412,7 +3948,7 @@ INSERT INTO `oc_url_alias` (`url_alias_id`, `query`, `keyword`) VALUES
 (835, 'category_id=27', 'mac'),
 (730, 'manufacturer_id=8', 'apple'),
 (772, 'information_id=4', 'about_us'),
-(768, 'product_id=42', 'test'),
+(845, 'product_id=42', 'test'),
 (789, 'category_id=34', 'mp3-players'),
 (781, 'category_id=36', 'test2'),
 (774, 'category_id=18', 'laptop-notebook'),
@@ -3498,6 +4034,10 @@ CREATE TABLE `oc_user` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_user`:
+--
+
+--
 -- Dumping data for table `oc_user`
 --
 
@@ -3518,11 +4058,15 @@ CREATE TABLE `oc_user_group` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_user_group`:
+--
+
+--
 -- Dumping data for table `oc_user_group`
 --
 
 INSERT INTO `oc_user_group` (`user_group_id`, `name`, `permission`) VALUES
-(1, 'Administrator', '{"access":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission"],"modify":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission"]}'),
+(1, 'Administrator', '{"access":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission","module\\/latest","module\\/special","module\\/fumeproducttab"],"modify":["analytics\\/google_analytics","captcha\\/basic_captcha","captcha\\/google_captcha","catalog\\/attribute","catalog\\/attribute_group","catalog\\/category","catalog\\/download","catalog\\/filter","catalog\\/information","catalog\\/manufacturer","catalog\\/option","catalog\\/product","catalog\\/recurring","catalog\\/review","common\\/column_left","common\\/filemanager","common\\/menu","common\\/profile","common\\/stats","customer\\/custom_field","customer\\/customer","customer\\/customer_group","design\\/banner","design\\/layout","extension\\/analytics","extension\\/captcha","extension\\/feed","extension\\/fraud","extension\\/installer","extension\\/modification","extension\\/module","extension\\/openbay","extension\\/payment","extension\\/shipping","extension\\/total","feed\\/google_base","feed\\/google_sitemap","feed\\/openbaypro","fraud\\/fraudlabspro","fraud\\/ip","fraud\\/maxmind","localisation\\/country","localisation\\/currency","localisation\\/geo_zone","localisation\\/language","localisation\\/length_class","localisation\\/location","localisation\\/order_status","localisation\\/return_action","localisation\\/return_reason","localisation\\/return_status","localisation\\/stock_status","localisation\\/tax_class","localisation\\/tax_rate","localisation\\/weight_class","localisation\\/zone","marketing\\/affiliate","marketing\\/contact","marketing\\/coupon","marketing\\/marketing","module\\/account","module\\/affiliate","module\\/amazon_login","module\\/amazon_pay","module\\/banner","module\\/bestseller","module\\/carousel","module\\/category","module\\/ebay_listing","module\\/featured","module\\/filter","module\\/google_hangouts","module\\/html","module\\/information","module\\/latest","module\\/pp_button","module\\/pp_login","module\\/slideshow","module\\/special","module\\/store","openbay\\/amazon","openbay\\/amazon_listing","openbay\\/amazon_product","openbay\\/amazonus","openbay\\/amazonus_listing","openbay\\/amazonus_product","openbay\\/ebay","openbay\\/ebay_profile","openbay\\/ebay_template","openbay\\/etsy","openbay\\/etsy_product","openbay\\/etsy_shipping","openbay\\/etsy_shop","payment\\/amazon_login_pay","payment\\/authorizenet_aim","payment\\/authorizenet_sim","payment\\/bank_transfer","payment\\/bluepay_hosted","payment\\/bluepay_redirect","payment\\/cheque","payment\\/cod","payment\\/firstdata","payment\\/firstdata_remote","payment\\/free_checkout","payment\\/g2apay","payment\\/globalpay","payment\\/globalpay_remote","payment\\/klarna_account","payment\\/klarna_invoice","payment\\/liqpay","payment\\/nochex","payment\\/paymate","payment\\/paypoint","payment\\/payza","payment\\/perpetual_payments","payment\\/pp_express","payment\\/pp_payflow","payment\\/pp_payflow_iframe","payment\\/pp_pro","payment\\/pp_pro_iframe","payment\\/pp_standard","payment\\/realex","payment\\/realex_remote","payment\\/sagepay_direct","payment\\/sagepay_server","payment\\/sagepay_us","payment\\/securetrading_pp","payment\\/securetrading_ws","payment\\/skrill","payment\\/twocheckout","payment\\/web_payment_software","payment\\/worldpay","report\\/affiliate","report\\/affiliate_activity","report\\/affiliate_login","report\\/customer_activity","report\\/customer_credit","report\\/customer_login","report\\/customer_online","report\\/customer_order","report\\/customer_reward","report\\/marketing","report\\/product_purchased","report\\/product_viewed","report\\/sale_coupon","report\\/sale_order","report\\/sale_return","report\\/sale_shipping","report\\/sale_tax","sale\\/order","sale\\/recurring","sale\\/return","sale\\/voucher","sale\\/voucher_theme","setting\\/setting","setting\\/store","shipping\\/auspost","shipping\\/citylink","shipping\\/fedex","shipping\\/flat","shipping\\/free","shipping\\/item","shipping\\/parcelforce_48","shipping\\/pickup","shipping\\/royal_mail","shipping\\/ups","shipping\\/usps","shipping\\/weight","tool\\/backup","tool\\/error_log","tool\\/upload","total\\/coupon","total\\/credit","total\\/handling","total\\/klarna_fee","total\\/low_order_fee","total\\/reward","total\\/shipping","total\\/sub_total","total\\/tax","total\\/total","total\\/voucher","user\\/api","user\\/user","user\\/user_permission","module\\/latest","module\\/special","module\\/fumeproducttab"]}'),
 (10, 'Demonstration', '');
 
 -- --------------------------------------------------------
@@ -3547,6 +4091,10 @@ CREATE TABLE `oc_voucher` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_voucher`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -3562,6 +4110,10 @@ CREATE TABLE `oc_voucher_history` (
   `date_added` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- RELATIONS FOR TABLE `oc_voucher_history`:
+--
+
 -- --------------------------------------------------------
 
 --
@@ -3573,6 +4125,10 @@ CREATE TABLE `oc_voucher_theme` (
   `voucher_theme_id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_voucher_theme`:
+--
 
 --
 -- Dumping data for table `oc_voucher_theme`
@@ -3597,6 +4153,10 @@ CREATE TABLE `oc_voucher_theme_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_voucher_theme_description`:
+--
+
+--
 -- Dumping data for table `oc_voucher_theme_description`
 --
 
@@ -3616,6 +4176,10 @@ CREATE TABLE `oc_weight_class` (
   `weight_class_id` int(11) NOT NULL,
   `value` decimal(15,8) NOT NULL DEFAULT '0.00000000'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_weight_class`:
+--
 
 --
 -- Dumping data for table `oc_weight_class`
@@ -3642,6 +4206,10 @@ CREATE TABLE `oc_weight_class_description` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_weight_class_description`:
+--
+
+--
 -- Dumping data for table `oc_weight_class_description`
 --
 
@@ -3665,6 +4233,10 @@ CREATE TABLE `oc_zone` (
   `code` varchar(32) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- RELATIONS FOR TABLE `oc_zone`:
+--
 
 --
 -- Dumping data for table `oc_zone`
@@ -7797,6 +8369,10 @@ CREATE TABLE `oc_zone_to_geo_zone` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
+-- RELATIONS FOR TABLE `oc_zone_to_geo_zone`:
+--
+
+--
 -- Dumping data for table `oc_zone_to_geo_zone`
 --
 
@@ -8896,7 +9472,7 @@ ALTER TABLE `oc_event`
 -- AUTO_INCREMENT for table `oc_extension`
 --
 ALTER TABLE `oc_extension`
-  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `extension_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `oc_filter`
 --
@@ -8931,12 +9507,12 @@ ALTER TABLE `oc_layout`
 -- AUTO_INCREMENT for table `oc_layout_module`
 --
 ALTER TABLE `oc_layout_module`
-  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `layout_module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 --
 -- AUTO_INCREMENT for table `oc_layout_route`
 --
 ALTER TABLE `oc_layout_route`
-  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
+  MODIFY `layout_route_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 --
 -- AUTO_INCREMENT for table `oc_length_class`
 --
@@ -8976,7 +9552,7 @@ ALTER TABLE `oc_modification`
 -- AUTO_INCREMENT for table `oc_module`
 --
 ALTER TABLE `oc_module`
-  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `module_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `oc_option`
 --
@@ -9041,37 +9617,37 @@ ALTER TABLE `oc_order_voucher`
 -- AUTO_INCREMENT for table `oc_product`
 --
 ALTER TABLE `oc_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
 -- AUTO_INCREMENT for table `oc_product_discount`
 --
 ALTER TABLE `oc_product_discount`
-  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=441;
+  MODIFY `product_discount_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
 --
 -- AUTO_INCREMENT for table `oc_product_image`
 --
 ALTER TABLE `oc_product_image`
-  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2352;
+  MODIFY `product_image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2367;
 --
 -- AUTO_INCREMENT for table `oc_product_option`
 --
 ALTER TABLE `oc_product_option`
-  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
+  MODIFY `product_option_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 --
 -- AUTO_INCREMENT for table `oc_product_option_value`
 --
 ALTER TABLE `oc_product_option_value`
-  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `product_option_value_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
 -- AUTO_INCREMENT for table `oc_product_reward`
 --
 ALTER TABLE `oc_product_reward`
-  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=546;
+  MODIFY `product_reward_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=549;
 --
 -- AUTO_INCREMENT for table `oc_product_special`
 --
 ALTER TABLE `oc_product_special`
-  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=440;
+  MODIFY `product_special_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=443;
 --
 -- AUTO_INCREMENT for table `oc_recurring`
 --
@@ -9156,7 +9732,7 @@ ALTER TABLE `oc_upload`
 -- AUTO_INCREMENT for table `oc_url_alias`
 --
 ALTER TABLE `oc_url_alias`
-  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=844;
+  MODIFY `url_alias_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=846;
 --
 -- AUTO_INCREMENT for table `oc_user`
 --
@@ -9201,9 +9777,7 @@ ALTER TABLE `oc_zone`
 -- AUTO_INCREMENT for table `oc_zone_to_geo_zone`
 --
 ALTER TABLE `oc_zone_to_geo_zone`
-  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;SET FOREIGN_KEY_CHECKS=1;
-COMMIT;
-
+  MODIFY `zone_to_geo_zone_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
